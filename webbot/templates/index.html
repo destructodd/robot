@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Robot</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" 
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
+crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Toddbot</h1>
+
+<h3><img src="{{ url_for('video_feed') }}" width="90%"></h3>
+
+Movement:<br>
+<button type="button" class="btn btn-default" id="move-left"> < </button>
+<button type="button" class="btn btn-default" id="move-forward"> ^ </button>
+<button type="button" class="btn btn-default" id="move-backward"> v </button>
+<button type="button" class="btn btn-default" id="move-right"> > </button>
+<button type="button" class="btn btn-danger" id="stop">Stop</button>
+<br><br>
+
+Speed:<br>
+<input type="range" max="200" value="75" step="10" min="10", id="set-speed"> 
+<br><br>
+
+Camera:<br>
+<button type="button" class="btn btn-default" id="cam-left"> < </button>
+<button type="button" class="btn btn-default" id="cam-up"> ^ </button>
+<button type="button" class="btn btn-default" id="cam-down"> v </button>
+<button type="button" class="btn btn-default" id="cam-right"> > </button>
+<button type="button" class="btn btn-danger" id="centre">Centre</button>
+<br><br>
+
+<script>
+
+$('#stop').on('click', function(){
+$.get('move/stop');
+});
+$('#move-forward').on('click', function(){
+$.get('/move/forward');
+});
+$('#move-backward').on('click', function(){
+$.get('/move/backward');
+});
+$('#move-left').on('click', function(){
+$.get('/move/left');
+});
+$('#move-right').on('click', function(){
+$.get('/move/right');
+});
+$('#set-speed').on('change', function(){
+$.get('/set_speed/' + this.value);
+});
+
+$('#centre').on('click', function(){
+$.get('cam/centre');
+});
+$('#cam-up').on('click', function(){
+$.get('/cam/up');
+});
+$('#cam-down').on('click', function(){
+$.get('/cam/down');
+});
+$('#cam-left').on('click', function(){
+$.get('/cam/left');
+});
+$('#cam-right').on('click', function(){
+$.get('/cam/right');
+});
+
+</script>
+</body>
+</html>
