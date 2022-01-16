@@ -5,7 +5,7 @@ Code to operate an RPI based wheeled robot.
 Components 
 Devastator Tank Robot Platform
 RPI 4 A+
-Motor driver board
+3A 4V-16V 2 Channel DC Motor Driver
 RPI camera
 Pan and tilt platform
 A PNY Curve 5200 powerbank is used to power the RPI
