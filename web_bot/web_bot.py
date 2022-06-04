@@ -11,13 +11,12 @@ os.system("sudo pigpiod")
 app = flask.Flask(__name__)
 app.config["DEBUG"] = False
 
-
-
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 webbot = robot()
 
+#API commands
 @app.route('/')
 def index():
     """Video streaming home page."""
