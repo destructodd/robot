@@ -69,8 +69,6 @@ def stop():
     pi.set_PWM_dutycycle(9, 0)
     pi.set_PWM_dutycycle(10, 0)
 
-
-
 def RC():
     
     duty = 64
@@ -133,10 +131,7 @@ def RC():
         GPIO.cleanup()
         pi.set_servo_pulsewidth(27, 2200)
         pi.set_servo_pulsewidth(17, 1500)
-
-        
-    
-        
+     
 def RC_vision():
     while True: 
         success, img = cap.read()

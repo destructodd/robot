@@ -9,7 +9,7 @@ import imutils.video
 import imutils
 import threading
 
-os.system("sudo pigpiod")
+#os.system("sudo pigpiod")
 pi = pigpio.pi()
 
 freq = 20
@@ -156,6 +156,7 @@ def drive(x, last_seen):
 
 start = time.time()
 count = 0
+
 while True:
     #read camera and output stored image
     img, imgContour = process_img()
@@ -164,7 +165,7 @@ while True:
     #pass image to trackball function which outputs coords and size of object
     x, y, area = trackBall(img)
     print('x=', x,'y=', y, 'area=', area)
-    threading.Thread(target=camera_move, args=(y,), daemon=True).start()
+    threading.Thread(target=camera_move, args=(y)).start()
     
     area_modifier = 1 - (area / 4500)
     
