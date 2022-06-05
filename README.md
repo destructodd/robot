@@ -1,6 +1,6 @@
 # robot
 RPI Robot
-Code to operate an RPI based wheeled robot. 
+Code to operate a Raspberry PI powered robot, with various functions. 
 
 **Components**   
 - Devastator Tank Robot Platform  
