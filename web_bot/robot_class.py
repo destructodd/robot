@@ -21,7 +21,7 @@ class robot():
     servo_pins = [17,27]    
     def set_duty(self, duty):
         self.duty = duty
-    def move(self, direction):
+    def drive(self, direction):
         if direction == 'forward':
             duty_list = [0, self.duty, self.duty, 0]
         if direction == 'backward':
@@ -34,22 +34,22 @@ class robot():
             duty_list = [0, 0, 0, 0]
         for count, motor in enumerate(self.motor_pins):
             pi.set_PWM_dutycycle(motor, duty_list[count])   
-    def cam(self, move):
-        if move == 'centre':
+    def cam_move(self, direction):
+        if direction == 'centre':
             for pin in self.servo_pins:
                 pi.set_servo_pulsewidth(pin, 1500)
                 time.sleep(0.25)
         else:
-            if move == 'up':     
+            if direction == 'up':     
                 x = 0
                 y = -self.pulse
-            elif move == 'down':     
+            elif direction == 'down':     
                 x = 0
                 y = self.pulse
-            elif move == 'left':     
+            elif direction == 'left':     
                 x = self.pulse
                 y = 0
-            elif move == 'right':     
+            elif direction == 'right':     
                 x = -self.pulse
                 y = 0
             x += pi.get_servo_pulsewidth(self.servo_pins[0])

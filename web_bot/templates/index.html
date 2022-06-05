@@ -14,12 +14,12 @@ crossorigin="anonymous"></script>
 
 <h3><img src="{{ url_for('video_feed') }}" width="90%"></h3>
 
-Movement:<br>
-<button type="button" class="btn btn-default" id="move-left"> < </button>
-<button type="button" class="btn btn-default" id="move-forward"> ^ </button>
-<button type="button" class="btn btn-default" id="move-backward"> v </button>
-<button type="button" class="btn btn-default" id="move-right"> > </button>
-<button type="button" class="btn btn-danger" id="stop">Stop</button>
+Drive:<br>
+<button type="button" class="btn btn-default" id="drive-left"> < </button>
+<button type="button" class="btn btn-default" id="drive-forward"> ^ </button>
+<button type="button" class="btn btn-default" id="drive-backward"> v </button>
+<button type="button" class="btn btn-default" id="drive-right"> > </button>
+<button type="button" class="btn btn-danger" id="drive-stop">Stop</button>
 <br><br>
 
 Speed:<br>
@@ -36,27 +36,27 @@ Camera:<br>
 
 <script>
 
-$('#stop').on('click', function(){
-$.get('move/stop');
+$('#drive-stop').on('click', function(){
+$.get('/drive/stop');
 });
-$('#move-forward').on('click', function(){
-$.get('/move/forward');
+$('#drive-forward').on('click', function(){
+$.get('/drive/forward');
 });
-$('#move-backward').on('click', function(){
-$.get('/move/backward');
+$('#drive-backward').on('click', function(){
+$.get('/drive/backward');
 });
-$('#move-left').on('click', function(){
-$.get('/move/left');
+$('#drive-left').on('click', function(){
+$.get('/drive/left');
 });
-$('#move-right').on('click', function(){
-$.get('/move/right');
+$('#drive-right').on('click', function(){
+$.get('/drive/right');
 });
 $('#set-speed').on('change', function(){
 $.get('/set_speed/' + this.value);
 });
 
 $('#centre').on('click', function(){
-$.get('cam/centre');
+$.get('/cam/centre');
 });
 $('#cam-up').on('click', function(){
 $.get('/cam/up');

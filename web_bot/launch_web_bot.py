@@ -14,9 +14,10 @@ app.config["DEBUG"] = False
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
+#initialise robot
 webbot = robot()
 
-#API commands
+#camera feed
 @app.route('/')
 def index():
     """Video streaming home page."""
@@ -35,21 +36,22 @@ def video_feed():
     return Response(gen(Camera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+#API commands
 @app.route('/set_speed/<speed>')
 def set_speed(speed):
-    webbot.move('stop')
+    webbot.drive('stop')
     webbot.set_duty(speed)
     return speed
 
-@app.route('/move/<direction>')
-def move(direction):
-    webbot.move(direction)
+@app.route('/drive/<direction>')
+def drive(direction):
+    webbot.drive(direction)
     return direction
     
-@app.route('/cam/<move>')
-def cam(move):
-    webbot.cam(move)
-    return move
+@app.route('/cam/<direction>')
+def cam_move(direction):
+    webbot.cam_move(direction)
+    return direction
 
 app.run(debug = False, port=5000, use_reloader=False,host='0.0.0.0', threaded = True)
 
