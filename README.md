@@ -14,12 +14,12 @@ Code to operate a Raspberry Pi powered robot.
 
 **RPI GPIO Pin connections**  
 GPIO Pin No.  Connection
-7             M1B motor driver input
-8             M1A motor driver input
-9             M2A motor driver input
-10            M2B motor driver input
-17            Horizontal camera servo input
-27            Vertical camera servo input
+7             M1B motor driver input  
+8             M1A motor driver input  
+9             M2A motor driver input  
+10            M2B motor driver input  
+17            Horizontal camera servo input  
+27            Vertical camera servo input  
 
 **Current functionality**   
 
