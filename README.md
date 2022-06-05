@@ -12,7 +12,7 @@ Code to operate a Raspberry PI powered robot, with various functions.
 - 6x AA batteries holder to power motors
 - Lots of patch cables
 
-**RPI GPIO Pin connections**
+**RPI GPIO Pin connections**  
 GPIO Pin No.  Connection
 7             M1B motor driver input
 8             M1A motor driver input
@@ -31,7 +31,7 @@ GPIO Pin No.  Connection
 
 **wip** Multiple object seeking using computer vision 
 
-**Compatibility**
+**Compatibility**  
 This was built on RPI 3 A Plus, using Buster Raspberry Pi OS. It is  not functional on Bullseye, due to an overhaul of the camera implementation. 
 
 The pigpio library is used to control servos, and the pigpiod daemon must be installed and launched before running any of the code. 
