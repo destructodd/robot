@@ -1,9 +1,9 @@
 # robot
 RPI Robot
-Code to operate a Raspberry PI powered robot, with various functions. 
+Code to operate a Raspberry Pi powered robot.
 
 **Components**   
-- Devastator Tank Robot Platform  
+- Devastator Tank Robot Platform
 - Raspberry Pi 
 - 3A 4V-16V 2 Channel DC Motor Driver  
 - RPI camera  
