@@ -34,6 +34,12 @@ Camera:<br>
 <button type="button" class="btn btn-danger" id="centre">Centre</button>
 <br><br>
 
+Camera x:<br>
+<input type="range" max="2200" value="1500" step="10" min="800", id="camera-x"> <br>
+Camera y:<br>
+<input type="range" max="2200" value="1500" step="10" min="800", id="camera-y"> 
+<br><br>
+
 <script>
 
 $('#drive-stop').on('click', function(){
@@ -57,7 +63,11 @@ $.get('/set_speed/' + this.value);
 
 $('#centre').on('click', function(){
 $.get('/cam/centre');
+$('#camera-x').val(1500);
+$('#camera-y').val(1500);
 });
+
+
 $('#cam-up').on('click', function(){
 $.get('/cam/up');
 });
@@ -69,6 +79,13 @@ $.get('/cam/left');
 });
 $('#cam-right').on('click', function(){
 $.get('/cam/right');
+});
+
+$('#camera-x').on('change', function(){
+$.get('/cam_absolute_x/' + this.value);
+});
+$('#camera-y').on('change', function(){
+$.get('/cam_absolute_y/' + this.value);
 });
 
 </script>

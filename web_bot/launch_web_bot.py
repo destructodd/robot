@@ -53,6 +53,16 @@ def cam_move(direction):
     webbot.cam_move(direction)
     return direction
 
+@app.route('/cam_absolute_x/<value>')
+def cam_increment_x(value):
+    webbot.cam_increment(0, value)
+    return value
+
+@app.route('/cam_absolute_y/<value>')
+def cam_increment_y(value):
+    webbot.cam_increment(1, value)
+    return value
+
 app.run(debug = False, port=5000, use_reloader=False,host='0.0.0.0', threaded = True)
 
 

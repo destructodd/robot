@@ -17,7 +17,7 @@ class robot():
             pi.set_PWM_dutycycle(motor, 0)
     #rb,rf,lf,lb
     motor_pins = [7,8,9,10]
-    #y,x
+    #x,y
     servo_pins = [17,27]    
     def set_duty(self, duty):
         self.duty = duty
@@ -57,4 +57,6 @@ class robot():
             x = max(800, min(2200, x))
             y = max(800, min(2200, y))
             pi.set_servo_pulsewidth(self.servo_pins[0], x)
-            pi.set_servo_pulsewidth(self.servo_pins[1], y)   
+            pi.set_servo_pulsewidth(self.servo_pins[1], y)
+    def cam_increment(self, pin, value):
+             pi.set_servo_pulsewidth(self.servo_pins[pin], value)
