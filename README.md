@@ -1,5 +1,4 @@
 # robot
-RPI Robot
 Code to operate a Raspberry Pi powered robot.
 
 **Components**   
@@ -13,13 +12,12 @@ Code to operate a Raspberry Pi powered robot.
 - Lots of patch cables
 
 **RPI GPIO Pin connections**  
-GPIO Pin No.  Connection
-7             M1B motor driver input  
-8             M1A motor driver input  
-9             M2A motor driver input  
-10            M2B motor driver input  
-17            Horizontal camera servo input  
-27            Vertical camera servo input  
+- 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M1B motor driver input  
+- 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M1A motor driver input  
+- 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M2A motor driver input  
+- 10&nbsp;&nbsp;&nbsp;&nbsp;M2B motor driver input  
+- 17&nbsp;&nbsp;&nbsp;&nbsp;Horizontal camera servo input  
+- 27&nbsp;&nbsp;&nbsp;&nbsp;Vertical camera servo input  
 
 **Current functionality**   
 
