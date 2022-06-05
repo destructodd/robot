@@ -4,7 +4,7 @@ Code to operate a Raspberry PI powered robot, with various functions.
 
 **Components**   
 - Devastator Tank Robot Platform  
-- RPI 4 A+  
+- Raspberry Pi 
 - 3A 4V-16V 2 Channel DC Motor Driver  
 - RPI camera  
 - Servo powered pan and tilt camera platform  
@@ -32,5 +32,7 @@ GPIO Pin No.  Connection
 **wip** Multiple object seeking using computer vision 
 
 **Compatibility**
-This was built on RPI 3 A Plus, using the Buster version of Raspberry Pi OS. It is  not functional on Bullseye, due to an overhaul of the camera implementation. 
+This was built on RPI 3 A Plus, using Buster Raspberry Pi OS. It is  not functional on Bullseye, due to an overhaul of the camera implementation. 
+
+The pigpio library is used to control servos, and the pigpiod daemon must be installed and launched before running any of the code. 
 
