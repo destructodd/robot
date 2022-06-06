@@ -41,3 +41,5 @@ This was built on RPI 3 A Plus, using Buster Raspberry Pi OS. It is  not functio
 
 The pigpio library is used to control servos, and the pigpiod daemon must be installed and launched before running any of the code. 
 
+![robot1](/photos/robot1.jpg)
+![robot2](/photos/robot2.jpg)
