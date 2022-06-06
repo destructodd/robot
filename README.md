@@ -28,13 +28,12 @@ Code to operate a Raspberry Pi powered robot.
 
 **Current functionality**   
 
-**web_bot** Remote control and video feed from the robot via a web app using flask. This version has been refactored to a class based system, with the robot class stored in a separate module. It runs the web app on port 5000, which will need to be opened on your router to allow access outside of your network.  
+**web_bot** Remote control and video feed from the robot via a web app using flask. This version has been refactored to a Python class based script, with the robot class stored in a separate module. The web app runs on port 5000, which will need to be opened on your router to allow access outside of your network.  
 
-**RC_bot** Operate as a remote control device using a wireless game contoller. Video footage from camera returned to RPI desktop.  
+**WIP RC_bot** Operate as a remote control device using a wireless game contoller. Video footage from camera returned to RPI desktop. Refactor in progress, 
 
-**ball_bot** Identify and move towards a tennis ball, using OpenCV to identify the correct shape and colour of the object.   
+**WIP ball_bot** Object seeking robot based on OpenCV and YOLO. 
 
-**wip** Multiple object seeking using computer vision 
 
 **Compatibility**  
 This was built on RPI 3 A Plus, using Buster Raspberry Pi OS. It is  not functional on Bullseye, due to an overhaul of the camera implementation. 
