@@ -2,13 +2,13 @@
 Code to operate a Raspberry Pi powered robot.
 
 **Components**   
-- Devastator Tank Robot Platform
-- Raspberry Pi 
-- 3A 4V-16V 2 Channel DC Motor Driver  
-- RPI camera  
-- Servo powered pan and tilt camera platform  
-- A PNY Curve 5200 powerbank is used to power the RPI and camera platform
-- 6x AA batteries holder to power motors
+- Devastator Tank Robot Platform with 2x DC motors
+- Raspberry Pi 3A+
+- Cytron 3A 4V-16V 2 Channel DC Motor Driver  
+- RPI camera (unknown brand)
+- PiHut mini pan and tilt platform with micro servos
+- PNY Curve 5200 powerbank to power the RPI
+- 6x AA batteries holder to power motor driver
 - Lots of patch cables
 
 **RPI GPIO Pin connections**  
