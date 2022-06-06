@@ -12,7 +12,7 @@ Code to operate a Raspberry Pi powered robot.
 - Lots of patch cables
 
 **RPI GPIO Pin connections**  
-|Physical Pin|GPIO Pin|Connection|
+|Physical Pin No.|GPIO Pin|Connection|
 | --- | --- | --- |
 |2|5v power|x servo power|
 |4|5v power|y servo power|
