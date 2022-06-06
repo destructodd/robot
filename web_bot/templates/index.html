@@ -30,18 +30,17 @@ Speed:<br>
 <input type="range" max="200" value="75" step="10" min="10", id="set-speed"> 
 <br><br>
 
-Camera:<br>
-<button type="button" class="btn btn-default" id="cam-left"> < </button>
-<button type="button" class="btn btn-default" id="cam-up"> ^ </button>
-<button type="button" class="btn btn-default" id="cam-down"> v </button>
-<button type="button" class="btn btn-default" id="cam-right"> > </button>
-<button type="button" class="btn btn-danger" id="centre">Centre</button>
-<br><br>
-
 Camera x:<br>
-<input type="range" max="2200" value="1500" step="10" min="800", id="camera-x"> <br>
+<input type="range" max="2200" value="1500" step="10" min="800", id="camera-x"> 
+<button type="button" class="btn btn-default" id="cam-left"> < </button>
+<button type="button" class="btn btn-default" id="cam-right"> > </button>
+<br>
 Camera y:<br>
 <input type="range" max="2200" value="1500" step="10" min="800", id="camera-y"> 
+<button type="button" class="btn btn-default" id="cam-down"> v </button> 
+<button type="button" class="btn btn-default" id="cam-up"> ^ </button>
+<br>
+<button type="button" class="btn btn-danger" id="centre">Centre</button>
 <br><br>
 
 <script>
@@ -74,15 +73,19 @@ $('#camera-y').val(1500);
 
 $('#cam-up').on('click', function(){
 $.get('/cam/up');
+$('#camera-y').val(parseInt($('#camera-y').val())-30);
 });
 $('#cam-down').on('click', function(){
 $.get('/cam/down');
+$('#camera-y').val(parseInt($('#camera-y').val())+30);
 });
 $('#cam-left').on('click', function(){
 $.get('/cam/left');
+$('#camera-x').val(parseInt($('#camera-x').val())+30);
 });
 $('#cam-right').on('click', function(){
 $.get('/cam/right');
+$('#camera-x').val(parseInt($('#camera-x').val())-30);
 });
 
 $('#camera-x').on('change', function(){

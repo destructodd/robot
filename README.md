@@ -12,12 +12,19 @@ Code to operate a Raspberry Pi powered robot.
 - Lots of patch cables
 
 **RPI GPIO Pin connections**  
-- 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M1B motor driver input  
-- 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M1A motor driver input  
-- 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M2A motor driver input  
-- 10&nbsp;&nbsp;&nbsp;&nbsp;M2B motor driver input  
-- 17&nbsp;&nbsp;&nbsp;&nbsp;Horizontal camera servo input  
-- 27&nbsp;&nbsp;&nbsp;&nbsp;Vertical camera servo input  
+|Physical Pin|GPIO Pin|Connection|
+| --- | --- | --- |
+|2|5v power|x servo power|
+|4|5v power|y servo power|
+|6|ground|motor driver ground|
+|9|ground|	x servo  ground|
+|11|GPIO 17|x servo input|
+|13|GPIO 27|y servo input|
+|14|ground|y servo ground|
+|19|GPIO 10|M2B motor driver input| 
+|21|GPIO 9|M2A motor driver input|  
+|24|GPIO 8|M1A motor driver input| 
+|26|GPIO  7|M1B motor driver input|  
 
 **Current functionality**   
 

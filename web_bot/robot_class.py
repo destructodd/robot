@@ -18,20 +18,22 @@ class robot():
     #rb,rf,lf,lb
     motor_pins = [7,8,9,10]
     #x,y
-    servo_pins = [17,27]    
+    servo_pins = [17,27]
+    last_direction = 'stop'
     def set_duty(self, duty):
         self.duty = duty
     def drive(self, direction):
         if direction == 'forward':
             duty_list = [0, self.duty, self.duty, 0]
-        if direction == 'backward':
+        elif direction == 'backward':
             duty_list = [self.duty, 0, 0, self.duty] 
-        if direction == 'left':
+        elif direction == 'left':
             duty_list = [0, self.duty, 0, self.duty]
-        if direction == 'right':
+        elif direction == 'right':
             duty_list = [self.duty, 0, self.duty, 0]
-        if direction == 'stop':
+        else:
             duty_list = [0, 0, 0, 0]
+        self.last_direction = direction
         for count, motor in enumerate(self.motor_pins):
             pi.set_PWM_dutycycle(motor, duty_list[count])   
     def cam_move(self, direction):

@@ -39,8 +39,8 @@ def video_feed():
 #API commands
 @app.route('/set_speed/<speed>')
 def set_speed(speed):
-    webbot.drive('stop')
     webbot.set_duty(speed)
+    webbot.drive(webbot.last_direction)
     return speed
 
 @app.route('/drive/<direction>')
