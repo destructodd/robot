@@ -3,7 +3,7 @@ import os
 import flask
 from flask import request, jsonify, render_template, Response
 from camera_pi import Camera
-from robot_class import robot
+from an_robot import robot
 
 #startup stuff
 os.system("sudo pigpiod")
