@@ -40,7 +40,7 @@ This was built on an RPI 3 A Plus running the Buster edition of Raspberry Pi OS.
 
 The pigpio library is used to control servos, and the pigpiod daemon must be installed and launched before running any of the code. 
 
-The an_robot module in tools>robot_class  should be installed to use the web bot. If you would rather not install it, copy the robot_class.py file to the root folder, and change 'import an_robot' in the script to 'import robot_class'. 
+The an_robot module in tools>robot_class  should be installed to use the web bot by running "python setup.py install" from the robot class folder. If you would rather not install it, copy the robot_class.py file to the root folder, and change 'import an_robot' in the script to 'import robot_class'. 
 
 ![robot1](/photos/robot1.jpg)
 ![robot2](/photos/robot2.jpg)
