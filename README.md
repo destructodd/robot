@@ -30,9 +30,9 @@ Code to operate a Raspberry Pi powered robot.
 
 **web_bot** Remote control and video feed from the robot via a web app using flask. This version has been refactored to a Python class based script, with the robot class stored in a separate module. The web app runs on port 5000, which will need to be opened on your router to allow access outside of your network.  
 
-**WIP RC_bot** Operate as a remote control device using a wireless game contoller. Video footage from camera returned to RPI desktop. Refactor in progress, 
+**Work in Progress RC_bot** Operate as a remote control device using a wireless game contoller. Video footage from camera returned to RPI desktop. Refactor in progress.
 
-**WIP ball_bot** Object seeking robot based on OpenCV and YOLO. 
+**Work in Progress ball_bot** Object seeking robot based on OpenCV and YOLO. 
 
 
 **Compatibility**  
